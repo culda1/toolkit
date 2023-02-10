@@ -5,7 +5,7 @@ const axios = require("axios");
 const requestIp = require("request-ip");
 var session = require('express-session');
 const fs = require("fs");
-const dbj = require("./libs/dbj.js");
+const dbj = require("../libs/dbj.js");
 
 
 
@@ -16,7 +16,7 @@ const io = require("socket.io")(http);
 
 
 // PORT:
-const PORT = process.env.PORT || 4444
+const PORT = process.env.PORT || 7777
 
 //use:
 app.use(session({
@@ -24,7 +24,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 }));
-app.use(express.static(path.join(__dirname, 'public')));
+console.log(__dirname);
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false, limit: "200mb" }));
 app.use(express.json({ limit: "200mb" }));
 
@@ -36,10 +37,10 @@ app.use(express.json({ limit: "200mb" }));
 //set:
 app.set('view engine', 'ejs');
 
-let check = require("./routes/check.js");
-let gen = require("./routes/gen.js");
-let main = require("./routes/main.js");
-let admin = require("./routes/admin.js");
+let check = require("../routes/check.js");
+let gen = require("../routes/gen.js");
+let main = require("../routes/main.js");
+let admin = require("../routes/admin.js");
 
 
 
