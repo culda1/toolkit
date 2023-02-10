@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+
+    </div>
+    <div class="mid">
+        <form method="post" id="login">
+            <div class="logo">
+                <img src="./img/logo_200x200.png" alt="">
+            </div>
+            <div class="error hide">
+                <p>error</p>
+            </div>
+            <div class="log">
+                <div class="name">
+                    <input type="text" id="user" required="required">
+                    <span class="sp">Username</span>
+                </div>
+                <div class="pass">
+                    <input type="password" id="pass" required="required">
+                    <span class="sp">Password</span>
+                </div>
+                <div class="tok">
+                    <input type="text" id="token" required="required">
+                    <span class="sp">Your Token</span>
+                </div>
+            </div>
+            <div class="btn">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
+    </div>
+    <div class="bot">
+        <p style="font-size: x-small; font-weight: bold; color: #c0bdbd;">Powered by <strong style="color: #ffffff;font-weight: bolder; font-size: 11px;margin-left: 1px;">CuldaStudios.</strong></p>
+    </div>
+    <!-- stb script -->
+    <script src="./js/stb.js"></script>
+</body>
+</html>

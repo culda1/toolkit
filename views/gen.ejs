@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/gen.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="img">
+            <img src="./img/sada1.png" alt="">
+        </div>
+              <div class="nav">
+            <ul>
+                <li><a class="active" href="/gen">Generator</a></li>
+                <li><a href="/check">checker</a></li>
+            </ul>
+        </div>
+        <div class="tbn">
+            <a href="/dashboard" class="card-btn">Home Page  <span>&rarr;</span></a>
+        </div>
+    </div>
+    <div class="mid">
+        <form method="post">
+            <div class="tit">
+                <h1>Welcome To Generator<br>Section</h1>
+            </div>
+            <div class="card1">
+                <div class="inp">
+                    <input type="text" id="find" placeholder="Find">
+                    <input type="text" id="rep" placeholder="Replace">
+                    <select name="" id="cty">
+                        <option>Country</option>
+                        <option value="ES">Spain</option>
+                        <option value="FR">France</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="CH">Swiss</option>
+                        <option value="CZ">Czech</option>
+                    </select>
+                </div>
+                <div class="inp2">
+                    <input id="limit" type="tel" maxlength="5" placeholder="0">
+                    <input type="text" id="sep" placeholder="Separator">
+                    <h3>New Line by default</h3>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="res1">
+                    <span style="font-size: 13px;font-weight: bolder;color:#3d3d3d">COUNT:</span><h3 id="count">0</h3>
+
+                    <span style="font-size: 13px;font-weight: bolder;color:#3d3d3d;margin-left: 270px;">DUPLICATE:</span><h3 id="dub">0</h3>
+                </div>
+                <div class="res">
+                      <div class="idk" id="idk_gen" style="display: none;">
+                        <h1>Generating...</h3>
+                      </div>
+                      <div class="idk" id="idk_clean" style="display: none;">
+                        <h1>Cleaning...</h3>
+                      </div>
+                    <textarea id="inp" cols="50" rows="20">
+                    </textarea>
+                </div>
+                <div class="btns">
+                    <div class="btn">
+                        <div class="idc" style="display: none">
+                        </div>
+                        <button id="gen" type="button">GENERATE</button>
+                    </div>
+                    <div class="btn">
+                        <div class="idc" style="display: none">
+                        </div>
+                        <button id="clean" type="button">CLEAN</button>
+                    </div>
+                </div>
+            </div>  
+        </form>
+    </div>
+    <div class="bot">
+        <p style="font-size: x-small; font-weight: bold; color: #313131;">Powered by <strong style="color: #000000;font-weight: bolder; font-size: 11px;margin-left: 1px;">CuldaStudios.</strong></p>
+    </div>
+<!--   script stb -->
+  <script src="./js/stb.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/check.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src = "/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="img">
+            <img src="./img/sada1.png" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/gen">Generator</a></li>
+                <li><a class="active" href="/check">checker</a></li>
+            </ul>
+        </div>
+        <div class="tbn">
+            <a href="/dashboard" class="card-btn">Home Page  <span>&rarr;</span></a>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="tit">
+            <h1>Welcome To Checker <br> Section</h1>
+        </div>
+        <form action="">
+            <div class="all">
+                <div class="res">
+                    <div class="sel">
+                        <select name="" id="cty">
+                            <option value="">Country</option>
+                            <option value="ES">Spain</option>
+                            <option value="FR">France</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="CH">Swiss</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                        <select name="" id="cari">
+                            <option value="">Carrier</option>
+                        </select>
+                      <div class="hm">
+                       <div class="idk" style="display: none;">
+                         <h1>Checking...</h3>
+                       </div>
+                       <textarea id="inp_check" cols="30" rows="30">
+                       </textarea>
+                    </div>
+                    </div>
+                </div>
+                <div class="res1">
+                    <div class="log">
+                        <div class="res2">
+                            <span style="font-size: 13px;font-weight: bolder;color:#3d3d3d">Valid:</span><h3 id="vali">0</h3>
+        
+                            <span style="font-size: 13px;font-weight: bolder;color:#3d3d3d;margin-left: 10px;">Invalid:</span><h3 id="invali">0</h3>
+                        </div>
+                        <ul class="bord">
+                            <!-- we add here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+              <div class="idc" style="display:none">
+            </div>
+                <button id="check" type="button">CHECK</button>
+            </div>
+        </form>
+    </div>
+    <div class="bot">
+        <p style="font-size: x-small; font-weight: bold; color: #313131;">Powered by <strong style="color: #000000;font-weight: bolder; font-size: 11px;margin-left: 1px;">CuldaStudios.</strong></p>
+    </div>
+    <!-- scripts js -->
+    <script src="./js/main.js"></script>
+    <script src="./js/stb.js"></script>
+</body>
+</html>
