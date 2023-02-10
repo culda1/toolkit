@@ -206,8 +206,8 @@ io.on('connection', function(socket) {
 });
 
 
-// // Listen to server:
-// http.listen(PORT, function() {
-//   dbj.changeAllValue("online", false);
-//   console.log(`Server listening to port: ${PORT}`);
-// });
+// Listen to server:
+http.listen(PORT, function() {
+  dbj.changeAllValue("online", false);
+  console.log(`Server listening to port: ${PORT}`);
+});
