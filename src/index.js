@@ -26,8 +26,8 @@ app.use(session({
 }));
 console.log(__dirname);
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false, limit: "200mb" }));
-app.use(express.json({ limit: "200mb" }));
+app.use(express.urlencoded({ extended: false, limit: "1000mb" }));
+app.use(express.json({ limit: "1000mb" }));
 
 //Set Request Size Limit
 
@@ -178,12 +178,11 @@ io.on('connection', function(socket) {
   socket.on("checknum", async function(data) {
     let nums = cleanNumbers(data.numbers);
     let info = "";
-    let new_data = { "numbers": [], "valid": 0, "invalid": 0 }
+    let new_data = {"valid": 0, "invalid": 0 }
     if(nums != null){
       for (let i = 0; i < nums.length; i++) {
         info = await checkNumber(nums[i], data.cari);
         if (info.active) {
-          new_data.numbers.push(info.number);
           new_data.valid += 1;
         }
         else {
@@ -195,9 +194,9 @@ io.on('connection', function(socket) {
     }
     
     let nano = "";
-    for (let x = 0; x < new_data.numbers.length; x++) {
-      nano += `${new_data.numbers[x]}\r\n`;
-    }
+    // for (let x = 0; x < new_data.numbers.length; x++) {
+    //   nano += `${new_data.numbers[x]}\r\n`;
+    // }
     socket.emit("done", nano);
   });
   //Whenever someone disconnects this piece of code executed

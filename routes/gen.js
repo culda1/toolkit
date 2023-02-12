@@ -80,6 +80,7 @@ router.post("/", function(req, res) {
     "SK": { code: "+421", area: ["9"], len: 9 },
     "CH": { code: "+41", area: ["6", "7"], len: 9 },
     "CZ": { code: "+420", area: ["6", "7"], len: 9 },
+    "DE": { code: "+49", area: ["16","17","15"], len: 10 },
   };
   if (codes[country] != null) {
     for (let i = 0; i < limit; i++) {
@@ -116,8 +117,6 @@ router.post("/clean", function(req, res) {
   // console.log(find);
   if (find != "" && nums != null) {
     nums = findRep(nums, find, rep);
-    clean_nums = cleanDup(nums);
-    nums = clean_nums.arr;
     count = nums.length;
   }
   let text = "";

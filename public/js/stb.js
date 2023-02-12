@@ -56,18 +56,26 @@ $(function() {
     let cty = $("#cty").val();
     let cari = $("#cari").val();
     const socket = io();
-    $(".idk").attr("style", "");
-    $(".idc").attr("style", "");
+    $("#inp_check").val("");
+    // $(".idk").attr("style", "");
+    // $(".idc").attr("style", "");
     socket.emit("checknum", { numbers, cty, cari });
     socket.on("done", function(numbers) {
-      $("#inp_check").val(numbers);
-      $(".idk").attr("style", "display:none");
-      $(".idc").attr("style", "display:none");
+      // $("#inp_check").val(numbers);
+      // $(".idk").attr("style", "display:none");
+      // $(".idc").attr("style", "display:none");
     })
     socket.on("print", function(result) {
+      let last = $("#inp_check").val();
       $("#vali").text(result.data.valid);
       $("#invali").text(result.data.invalid);
       if (result.info.active) {
+        if(last == ""){
+          $("#inp_check").val(result.info.number);
+        }
+        else{
+          $("#inp_check").val(`${last}\r\n${result.info.number}`);
+        }
         $(".bord").prepend(`<li>
           <div class="phone">
               <div class="n">
